@@ -9,4 +9,6 @@ if len(sys.argv) != 2:
 
 with open(sys.argv[1], 'rb') as f:
     data = process_file(f)
+    for key in data:
+        print(f"{key}: {data[key]}")
 print(data.get("MakerNote TotalShutterReleases", "not found--make sure to use file straight from camera"))
